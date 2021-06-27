@@ -1,2 +1,3 @@
 docker -v <-- version
-docker run -d -p 80:80 docker/getting-started
+docker  run -d -p 80:80 docker/getting-started
+docker container un hello-world
