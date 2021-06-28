@@ -1,3 +1,4 @@
-docker -v <-- version
+# docker -v <-- version
 
-docker container run hello-world
+# docker <object>  run <name>
+# docker container run hello-world
