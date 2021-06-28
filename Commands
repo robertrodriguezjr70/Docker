@@ -1,5 +1,6 @@
 # docker -v <-- version
 
 # docker <object>  run <name>
-# docker container run hello-world
 # docker build <directory> -t <image name>:<version>  <-- command to build an image
+# docker container run hello-world                    <-- command to run the container
+
