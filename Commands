@@ -2,3 +2,4 @@
 
 # docker <object>  run <name>
 # docker container run hello-world
+# docker build <directory> -t <image name>:<version>  <-- command to build an image
