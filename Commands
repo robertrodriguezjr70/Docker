@@ -1,4 +1,5 @@
-# docker -v <-- version
+# docker -v       <-- version
+# docker images   <-- show your images 
 
 # dockerfile contents example
    FROM <package><version>
