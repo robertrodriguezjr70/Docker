@@ -15,5 +15,5 @@
 
 # docker buld and run example
 # docker build image <directory> -t <image name>:<version>            <-- command to build an image
-# docker <container> run <image name>:<versin> -p 8080:90       <-- command to run the container
+# docker <container> run <image name>:<versin> -p 8080:8      0       <-- command to run the container
 
