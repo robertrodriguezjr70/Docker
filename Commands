@@ -1,6 +1,16 @@
 # docker -v <-- version
 
-# docker <object>  run <name>
-# docker build <directory> -t <image name>:<version>  <-- command to build an image
-# docker container run hello-world                    <-- command to run the container
+# dockerfile contents example
+   FROM <package><version>
+   CMD echo "message"
+   copy <source ><destination>  <--Example: COPY . /usr/local/apache2/htdocs/
+   
+
+
+
+
+
+# docker buld and run example
+# docker build <directory> -t <image name>:<version>            <-- command to build an image
+# docker <container> run <image name>:<versin> -p 8080:90       <-- command to run the container
 
