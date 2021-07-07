@@ -1,19 +1,18 @@
 # docker -v                            <-- version
-# docker images                        <-- show your images 
+ 
 # docker pull <image name><version>    <-- if you want to use a pre-made image from docker.hub
+# docker images ls                     <-- show your images
 # docker container ls                  <-- view running containers
 
 # dockerfile contents example
-   FROM <package><version>
-   CMD echo "message"
-   copy <source ><destination>  <--Example: COPY . /usr/local/apache2/htdocs/
+   # FROM <package><version>
+   # CMD echo "message"
+  
    
+# image build and container run
+   # docker buld and run example
+   # docker  image build .<directory> -t <image name>:<version>            <-- command to build an image
+   # docker  container run  -p 8080:80  <image name>:<versin>              <-- command to run the container
 
-
-
-
-
-# docker buld and run example
-# docker  image build .<directory> -t <image name>:<version>            <-- command to build an image
-# docker  container run <image name>:<versin> -p 8080:80               <-- command to run the container
-
+# docker copy example
+   # COPY <source > <destination>  <--Example: COPY . /usr/local/apache2/htdocs/
