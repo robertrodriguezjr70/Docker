@@ -15,4 +15,4 @@
    # docker  container run  -p 8080:80  <image name>:<versin>              <-- command to run the container
 
 # docker copy example
-   # COPY <source > <destination>  <--Example: COPY . /usr/local/apache2/htdocs/
+   # COPY <source > <destination>  <--this will copy everything in current directory, and put into this path /usr/local/apache2/htdocs/
