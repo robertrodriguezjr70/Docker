@@ -34,3 +34,7 @@ RUN apk add python   < -- adding python to image
 CMD ["8.8.8.8"]
 ENTRYPOINT ["ping", "-t", "5"]
 
+
+# Build image from a remote dockerfile
+ # docker build https://github.com/madflojo/automatron.git -t automatron:1
+
