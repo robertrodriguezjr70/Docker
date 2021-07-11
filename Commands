@@ -5,6 +5,7 @@
 
 # docker container ls                  <-- view running containers
 # docker container ps
+# docker container run -d -p 8080:80 --name=centos7 <container name>
 # docker container stop $(docker container ls -aq))
 # docker container prune  <-- delete's all stopped containers
 # docker container stop  <id>
