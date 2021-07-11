@@ -17,7 +17,7 @@
   
    
 # image build and container run
-   # docker buld and run example
+   # docker build and run example
    # docker  image build .<directory> -t <image name>:<version>            <-- command to build an image
    # docker  container run  -p 8080:80  <image name>:<versin>              <-- command to run the container
 
