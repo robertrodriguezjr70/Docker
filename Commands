@@ -6,7 +6,7 @@
 # docker container ls                  <-- view running containers
 # docker container ps
 # docker container stop $(docker container ls -aq))
-# docker container prune  <-- delte's all stopped containers
+# docker container prune  <-- delete's all stopped containers
 # docker container stop  <id>
 
 
