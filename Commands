@@ -2,6 +2,7 @@
  
 # docker pull <image name><version>    <-- if you want to use a pre-made image from docker.hub
 # docker images ls                     <-- show your images
+# docker rmi image-id>
 
 # docker container ls                  <-- view running containers
 # docker container ps
