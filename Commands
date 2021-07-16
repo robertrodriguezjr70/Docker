@@ -7,7 +7,7 @@
 # Docker container build
   # docker  image build .<directory> -t <image name>:<version>         <-- command to build an image
   # docker image build -f dockerfile.prod . -t <image:version>         <-- running a Dockerfil with a diff extension
-  # docker image build --file="customname" . -t <image:version>        <-- running a Dockerfil with a custom name
+  # docker image build --file="dockerrobert" . -t <image:version>      <-- running a Dockerfil with a custom name
   
 
 
