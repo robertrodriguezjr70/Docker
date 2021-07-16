@@ -5,9 +5,10 @@
 # docker rmi image-id>
 
 # Docker container build
-  # docker  image build .<directory> -t <image name>:<version>         <-- command to build an image
-  # docker image build -f dockerfile.prod . -t <image:version>         <-- running a Dockerfil with a diff extension
-  # docker image build --file="dockerrobert" . -t <image:version>      <-- running a Dockerfil with a custom name
+  # docker  image build .<directory> -t <image name>:<version>                  <-- command to build an image
+  # docker image build -f dockerfile.prod . -t <image:version>                  <-- running a Dockerfil with a diff extension
+  # docker image build --file="dockerrobert" . -t <image:version>               <-- running a Dockerfil with a custom name
+  # docker build https://github.com/madflojo/automatron.git -t automatron:1     <-- building an image from a remote docer file
   
 
 
