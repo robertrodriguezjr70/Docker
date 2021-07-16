@@ -4,26 +4,13 @@
 # docker images ls                     <-- show your images
 # docker rmi image-id>
 
-# docker container ls                  <-- view running containers
-# docker container ps
-# docker container run -d -p 8080:80 --name=centos7 <container name>
-# docker container stop $(docker container ls -aq))
-# docker container prune  <-- delete's all stopped containers
-# docker container stop  <id>
+# Docker container build
+  # docker  image build .<directory> -t <image name>:<version>         <-- command to build an image
+  # docker image build -f dockerfile.prod . -t <image:version>         <-- running a Dockerfil with a diff name 
 
 
-# dockerfile contents example
-   # FROM <package><version>
-   # CMD echo "message"
-  
-   
-# image build and container run
-   # docker build and run example
-   # docker  image build .<directory> -t <image name>:<version>            <-- command to build an image
+# Docker container run
    # docker  container run  -p 8080:80  <image name>:<versin>              <-- command to run the container
-
-# docker copy example
-   # COPY <source > <destination>  <--this will copy everything in current directory, and put into this path /usr/local/apache2/htdocs/
 
 # COPY/Add
   #  The differance between copy and add is that add supports supports remote URLs and support TAR files 
@@ -31,6 +18,21 @@
   # FROM httpd:2.4
   # COPY . /usr/local/apache2/htdocs/       <-- source and destination
   # CMD echo "httpd 2.4 complete"
+
+
+# docker container ls                  <-- view running containers
+# docker container ps
+# docker container run -d -p 8080:80 --name=centos7 <image name>
+# docker container stop <container id>
+# docker container prune  <-- delete's all stopped containers
+
+
+
+# dockerfile contents example
+   # FROM <package><version>
+   # CMD echo "message"
+  
+   
 
 # Run vs CMD vs Entrypoint
 
