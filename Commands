@@ -6,6 +6,7 @@
 # docker image history
 # docker image prune -a                             <-- removes unused images 
 # docker container stop $(docker container ls -aq)  <-- stop all containers
+# docker container run -d -p 8080:80 --name=<custom name> <image name>
 
 # Docker container build
   # docker  image build .<directory> -t <image name>:<version>                  <-- command to build an image
