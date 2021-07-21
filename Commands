@@ -18,7 +18,9 @@
 # docker images
 
 # docker rmi <image-id>
+# docker image remove <image-id>
 # docker image history <image-id>
+# docker image inspect <image-id>
 # docker image prune -a                             <-- removes unused images 
 
 # docker  image build .<directory> -t <image name>:<version>                  <-- command to build an image
