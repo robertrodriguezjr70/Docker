@@ -31,8 +31,9 @@
 # docker logs -f <container id>
 # docker container run -d -p 8080:80 --name=<custom name> <image name>
 # docker container stop $(docker container ls -aq)  <-- stop all containers
-# docker container stop <container id>
-# docker container prune  <-- delete's all stopped containers
+# docker container stop <container id>                                             <-- shuts down clean/connections
+# docker container kill <container id>                                             <-- hard shut down
+# docker container prune                                                           <-- delete's all stopped containers
 # docker container remove <container-id>
 # docker build https://github.com/madflojo/automatron.git -t automatron:1
  
