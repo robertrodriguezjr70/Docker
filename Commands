@@ -1,6 +1,16 @@
 # docker -v                                         <-- version
 # docker-machine ip
  
+# COPY/Add
+  # FROM httpd:2.4
+  # RUN yum install bind-utils -y
+  # COPY . /usr/local/apache2/htdocs/       <-- source and destination
+  # CMD echo "httpd 2.4 complete"
+  # ADD webserver.tar.gz /var/www/html/
+
+
+
+
 # docker search <software> |more
 # docker pull <image name><version>                 <-- if you want to use a pre-made image from docker.hub
 
@@ -10,29 +20,19 @@
 # docker rmi <image-id>
 # docker image history <image-id>
 # docker image prune -a                             <-- removes unused images 
-# docker container stop $(docker container ls -aq)  <-- stop all containers
+
+# docker  image build .<directory> -t <image name>:<version>                  <-- command to build an image
+# docker image build -f dockerfile.prod . -t <image:version>                  <-- running a Dockerfil with a diff extension # docker build https://github.com/madflojo/automatron.git -t automatron:1     <-- building an image from a remote docer file
+
 
 # docker container ls
 # docker logs -f <container id>
 # docker container run -d -p 8080:80 --name=<custom name> <image name>
-
-# Docker container build
-  # docker  image build .<directory> -t <image name>:<version>                  <-- command to build an image
-  # docker image build -f dockerfile.prod . -t <image:version>                  <-- running a Dockerfil with a diff extension
-  # docker image build --file="dockerrobert" . -t <image:version>               <-- running a Dockerfil with a custom name
-  # docker build https://github.com/madflojo/automatron.git -t automatron:1     <-- building an image from a remote docer file
-  
-
+# docker container stop $(docker container ls -aq)  <-- stop all containers
 
 # Docker container run
    # docker  container run  -p 8080:80  <image name>:<versin>              <-- command to run the container
 
-# COPY/Add
-  #  The differance between copy and add is that add supports supports remote URLs and support TAR files 
-
-  # FROM httpd:2.4
-  # COPY . /usr/local/apache2/htdocs/       <-- source and destination
-  # CMD echo "httpd 2.4 complete"
 
 
 # docker container ls                  <-- view running containers
