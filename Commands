@@ -1,10 +1,14 @@
 # docker -v                                         <-- version
 # docker-machine ip
  
+# docker search <software> |more
 # docker pull <image name><version>                 <-- if you want to use a pre-made image from docker.hub
-# docker images ls                                  <-- show your images
-# docker rm <image-id>
-# docker image history
+
+# docker image ls                                  <-- show your images
+# docker images
+
+# docker rmi <image-id>
+# docker image history <image-id>
 # docker image prune -a                             <-- removes unused images 
 # docker container stop $(docker container ls -aq)  <-- stop all containers
 
