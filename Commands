@@ -1,5 +1,9 @@
 # docker-machine ip
 # docker login <09111190>
+
+# Push to docker
+ # type >  docker login 
+ # type > docker push docker push 09111190/httpd:1
  
 # COPY/Add
   # FROM httpd:2.4
