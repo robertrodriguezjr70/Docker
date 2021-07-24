@@ -12,16 +12,16 @@
   # CMD echo "httpd 2.4 complete"
   # ADD webserver.tar.gz /var/www/html/
 
+# Volume Mount Example 
+  # docker container run -d -p 8080:80 -v /Docker/challenge1:/var/www.html    <-- source/destination
 
-
-
-# docker search <software> |more
+# docker search <software>|more
 # docker pull <image name><version>                 <-- if you want to use a pre-made image from docker.hub
 
 # docker image ls                                  <-- show your images
 # docker images
 
-# docker rmi <image-id>
+# docker rm <image-id>
 # docker image remove <image-id>
 # docker image history <image-id>
 # docker image inspect <image-id>
