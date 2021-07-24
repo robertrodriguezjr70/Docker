@@ -1,6 +1,7 @@
 # docker-machine ip
 # docker login <09111190>
-
+# docker tag <old name> <new name>                  <-- change name/tag
+# docker container exec -it afbf0404a6b3 /bin/bash  <-- get into a container from terminal
 # Push to docker
  # type >  docker login 
  # type >  docker push 09111190/httpd:1
