@@ -4,3 +4,10 @@ RUN apt install ruby            -y
 RUN apt install python          -y
 RUN apt install build-essential -y
 RUN apt install apache2         -y
+RUN apt install net-tools       -y
+RUN apt installcoreutils        -y
+RUN apt installmlocate          -y
+RUN apt installbind-utils       -y
+RUN apt install man man-pages   -y
+RUN apt install iputils         -y
+RUN apt install systemd-sysv    -y
