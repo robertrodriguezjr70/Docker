@@ -1,3 +1,18 @@
+docker login
+docker push
+docker system df
+docker system info
+docker stats
+docker system events
+docker logs -f <container-id>
+docker container stats <container-id>
+docker container exec -it <container id> /bin/bash
+docker image history <image-id>
+docker inspect <image-id>
+docker port <container-id>
+docker pull <image name><version>                 <-- if you want to use a pre-made image from docker.hub
+docker image prune -a                             <-- removes unused images 
+
 # docker-machine ip
 # docker login <09111190>
 # docker tag <old name> <new name>                  <-- change name/tag
@@ -6,18 +21,12 @@
  # type >  docker login 
  # type >  docker push 09111190/httpd:1
  
-# COPY/Add
-  # FROM httpd:2.4
-  # RUN yum install bind-utils -y
-  # COPY . /usr/local/apache2/htdocs/       <-- source and destination
-  # CMD echo "httpd 2.4 complete"
-  # ADD webserver.tar.gz /var/www/html/
 
 # Volume Mount Example 
   # docker container run -d -p 8080:80 -v /Docker/challenge1:/var/www.html    <-- source/destination
 
-# docker search <software>|more
-# docker pull <image name><version>                 <-- if you want to use a pre-made image from docker.hub
+
+
 
 # docker image ls                                  <-- show your images
 # docker images
