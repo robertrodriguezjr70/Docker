@@ -11,3 +11,4 @@ RUN apt installbind-utils       -y
 RUN apt install man man-pages   -y
 RUN apt install iputils         -y
 RUN apt install systemd-sysv    -y
+RUN apt install ifupdown        -y
