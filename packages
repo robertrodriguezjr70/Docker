@@ -12,3 +12,5 @@ RUN apt install man man-pages   -y
 RUN apt install iputils         -y
 RUN apt install systemd-sysv    -y
 RUN apt install ifupdown        -y
+RUN apt install chrony          -y
+
