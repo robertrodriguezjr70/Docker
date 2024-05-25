@@ -1,0 +1,9 @@
+1) create a directory on your computere where you want to download the files to. 
+2) cd into directory
+3) git init
+4) git remote add origin "https://github.com/robertrodriguezjr70/Docker.git"
+5) git pull origin master
+
+
+*reset your origin - git remote remove origin
+
