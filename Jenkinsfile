@@ -5,8 +5,8 @@ pipeline {
         stage('Hello') {
             steps {
                 sh '''
-                 #[ -f pipeline-test/Dockerfile ] && echo "File exists"
-                 docker build -t myapp:latest pipeline-test/
+                 #[ -f pipeline-test/Dockerfile] && echo "File exists"
+                 docker build -t myapp:latest pipeline-test/jenkins/
                 '''
             }
         }
