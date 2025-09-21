@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                sh '''
+                 [ -f pipeline-test/Dockerfile ] && echo "File exists"
+                '''
             }
         }
     }
