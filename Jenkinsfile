@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
          DOCKER_VERSION =  2.0
+         USER_NAME = "Robert Rodriguez"
     }
     stages {
         stage('Build image from dockerfile') {
@@ -31,6 +32,7 @@ pipeline {
                             echo "Push image to Docker Hub"
                             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                             docker push 09111190/myapp:$DOCKER_VERSION
+                            echo "Thank you $USER_NAME"
                         '''
                     }
                 }
