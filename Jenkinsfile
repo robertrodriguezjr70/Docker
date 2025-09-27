@@ -7,26 +7,32 @@ pipeline {
         stage('Build image from dockerfile') {
             steps {
                 sh '''
-                 #[ -f pipeline-test/Dockerfile] && echo "File exists"
-                 #docker build -t myapp:latest pipeline-test/jenkins/
-                 docker build -t 09111190/myapp:latest pipeline-test/jenkins/
-                 echo 'This is Roberts Jenkins file'
+                    # Check if Dockerfile exists
+                    [ -f pipeline-test/Dockerfile ] && echo "File exists"
+                    
+                    # Build docker image
+                    docker build -t 09111190/myapp:latest pipeline-test/jenkins/
+                    echo 'This is Roberts Jenkins file'
                 '''
             }
         }
-        stage('test') {
+
+        stage('Push image to Docker Hub') {
             steps {
                 script {
                     // Use credentials securely
                     withCredentials([usernamePassword(
-                        credentialsId: '001', // Replace with your Jenkins credentials ID
+                        credentialsId: '001', // Replace with your actual Jenkins credentials ID
                         usernameVariable: 'DOCKER_USER',
                         passwordVariable: 'DOCKER_PASS'
                     )]) {
-                sh '''
-                   echo "Were in the test stage"
-                   Add docker logon and push command here
-                '''
+                        sh '''
+                            echo "Push image to Docker Hub"
+                            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                            docker push 09111190/myapp:latest
+                        '''
+                    }
+                }
             }
         }
     }
