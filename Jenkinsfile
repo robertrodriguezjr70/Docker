@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+        fake_var = 'fakey fake'
+    }
     stages {
         stage('Build image from dockerfile') {
             steps {
