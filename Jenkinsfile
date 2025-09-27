@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh '''
                    echo "Were in the test stage"
+                   docker push https://github.com/robertrodriguezjr70/Docker.git:5000/myapp:latest
                 '''
             }
         }
