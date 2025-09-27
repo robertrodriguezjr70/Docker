@@ -16,6 +16,13 @@ pipeline {
         }
         stage('test') {
             steps {
+                script {
+                    // Use credentials securely
+                    withCredentials([usernamePassword(
+                        credentialsId: '001', // Replace with your Jenkins credentials ID
+                        usernameVariable: 'DOCKER_USER',
+                        passwordVariable: 'DOCKER_PASS'
+                    )]) {
                 sh '''
                    echo "Were in the test stage"
                    Add docker logon and push command here
