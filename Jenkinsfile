@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build image from dockerfile') {
             steps {
                 sh '''
                  #[ -f pipeline-test/Dockerfile] && echo "File exists"
