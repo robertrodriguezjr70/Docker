@@ -16,8 +16,7 @@ pipeline {
                 sh '''
                    echo "Were in the test stage"
                    echo IpSecurity1! | docker login -u robert.rodriguez.jr.70@gmail.com --password-stdin
-                   #docker push https://github.com/robertrodriguezjr70/Docker.git:5000/myapp:latest
-                   docker push 64.227.52.125/var/jenkins_home/myapp:latest
+                   docker push myapp:latest
                    docker logout
                 '''
             }
