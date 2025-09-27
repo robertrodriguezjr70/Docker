@@ -13,8 +13,9 @@ pipeline {
                     
                     # Build docker image
                     # docker build -t 09111190/myapp:1.0 pipeline-test/jenkins/
+                    echo 'Build the Docker image'
                     docker build -t 09111190/myapp:$DOCKER_VERSION pipeline-test/jenkins/
-                    echo 'This is Roberts Jenkins file'
+                    echo 'The Docker image has been built'
                 '''
             }
         }
@@ -29,10 +30,10 @@ pipeline {
                         passwordVariable: 'DOCKER_PASS'
                     )]) {
                         sh '''
-                            echo "Push image to Docker Hub"
+                            echo 'Push image to Docker Hub'
                             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                             docker push 09111190/myapp:$DOCKER_VERSION
-                            echo "Thank you $USER_NAME"
+                            echo '$USER_NAME, the image has been pushed to Docker Hub'
                         '''
                     }
                 }
