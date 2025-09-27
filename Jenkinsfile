@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        fake_var = 'fakey fake'
+         DOCKER_VERSION =  2.0
     }
     stages {
         stage('Build image from dockerfile') {
@@ -11,8 +11,8 @@ pipeline {
                     [ -f pipeline-test/Dockerfile ] && echo "File exists"
                     
                     # Build docker image
-                    # docker build -t 09111190/myapp:latest pipeline-test/jenkins/
-                    docker build -t 09111190/myapp:1.0 pipeline-test/jenkins/
+                    # docker build -t 09111190/myapp:1.0 pipeline-test/jenkins/
+                    docker build -t 09111190/myapp:$DOCKER_VERSION pipeline-test/jenkins/
                     echo 'This is Roberts Jenkins file'
                 '''
             }
@@ -30,7 +30,7 @@ pipeline {
                         sh '''
                             echo "Push image to Docker Hub"
                             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                            docker push 09111190/myapp:1.0
+                            docker push 09111190/myapp:$DOCKER_VERSION
                         '''
                     }
                 }
