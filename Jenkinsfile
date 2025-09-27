@@ -16,9 +16,7 @@ pipeline {
             steps {
                 sh '''
                    echo "Were in the test stage"
-                   echo IpSecurity1! | docker login -u robert.rodriguez.jr.70@gmail.com --password-stdin
-                   docker push 09111190/myapp:latest
-                   docker logout
+                   Add docker logon and push command here
                 '''
             }
         }
