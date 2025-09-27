@@ -11,7 +11,8 @@ pipeline {
                     [ -f pipeline-test/Dockerfile ] && echo "File exists"
                     
                     # Build docker image
-                    docker build -t 09111190/myapp:latest pipeline-test/jenkins/
+                    #docker build -t 09111190/myapp:latest pipeline-test/jenkins/
+                    docker build -t 09111190/myapp:1 pipeline-test/jenkins/
                     echo 'This is Roberts Jenkins file'
                 '''
             }
