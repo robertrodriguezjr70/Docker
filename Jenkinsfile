@@ -33,7 +33,7 @@ pipeline {
                             echo 'Push image to Docker Hub'
                             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                             docker push 09111190/myapp:$DOCKER_VERSION
-                            echo '"$USER_NAME:", the image has been pushed to Docker Hub'
+                            echo  '$USER_NAME:', the image has been pushed to Docker Hub
                         '''
                     }
                 }
