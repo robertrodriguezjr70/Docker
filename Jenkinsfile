@@ -15,7 +15,10 @@ pipeline {
             steps {
                 sh '''
                    echo "Were in the test stage"
-                   docker push https://github.com/robertrodriguezjr70/Docker.git:5000/myapp:latest
+                   echo IpSecurity1! | docker login -u robert.rodriguez.jr.70@gmail.com --password-stdin
+                   #docker push https://github.com/robertrodriguezjr70/Docker.git:5000/myapp:latest
+                   docker push robertsdocker/myapp:v1.0.0
+                   docker logout
                 '''
             }
         }
