@@ -1,0 +1,28 @@
+version: "3.9"
+# This is a test docker compose file with simple services for testing
+services:
+  apache:
+    image: httpd:latest
+    container_name: apache_server
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+  whoami:
+    image: traefik/whoami
+    container_name: whoami_server
+    ports:
+      - "8081:80"
+  alpine:
+    image: alpine:latest
+    container_name: alpine_test
+    command: sh -c "while true; do sleep 3600; done"
+  redis:
+    image: redis:latest
+    container_name: redis_server
+    ports:
+      - "6379:6379"
