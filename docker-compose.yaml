@@ -9,11 +9,11 @@ services:
     volumes:
       - ./html:/usr/local/apache2/htdocs/
   nginx:
-    image: nginx:latest
+    image: ghcr.io/robertrodriguezjr70/gh-first-action/nginx:latest
     ports:
       - "8080:80"
   whoami:
-    image: traefik/whoami
+    image: ghcr.io/robertrodriguezjr70/gh-actions-repo/traefik/whoami:latest
     container_name: whoami_server
     ports:
       - "8081:80"
