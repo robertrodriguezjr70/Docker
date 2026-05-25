@@ -2,8 +2,8 @@ version: "3.9"
 # This is a test docker compose file with simple services for testing
 services:
   apache:
-    image: httpd:latest
-    container_name: apache_server
+    image: ghcr.io/robertrodriguezjr70/gh-actions-repo/httpd:latest
+    container_name: httpd_server
     ports:
       - "80:80"
     volumes:
